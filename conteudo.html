@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href= "style.css"/>
+    <title>Formulário para vaga</title>
+</head>
+<body class="main">
+    <container class="content">
+        <fieldset id="titlebox">
+            <h1 id="title"> Faça parte da nossa empresa! </h1>
+            <p class="about">Quer começar a trabalhar com programação? </p>
+            <p class="about">
+                Estamos com vagas abertas!
+                Complete o fomulário com suas informações e faça parte dessa grande família! 
+            </p> 
+        </fieldset>
+       <fieldset class="white_field">
+           <div class="part">
+               <label> 1.Nome: </label>
+                <input type="text" class="info" name="name">
+                <br>
+                <br>
+                <label> 2.Sobrenome: </label>
+                <input type="text" class="info" name="surname">
+                <br>
+                <br>
+                <label> 3. E-mail:</label> 
+                <input type="email" class="info" name="email">
+                <br>
+                </div>
+                <div class="part">
+                <label> 4. De qual lado você desenvolve? </label>
+                <br>
+                <br>
+                <label> 
+                    <input type="radio" value="front=end" id="frontend"> Front-end
+                </label>
+                <label> 
+                    <input type="radio" value="back-end" id="backend"> Back-end
+                </label>
+                <label>
+                    <input type="radio" value="full-stack" id="full-stack">Full-stack
+                </label>
+                <br>
+                </div>
+                <div class="part">
+                <label>
+                    5.Senioridade
+                </label>
+                <select>
+                    <option value="">Selecione</option>
+                    <option value="junior">Junior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="senior">Senior</option>
+                </select>
+                <br>
+                </div>
+                <div class="part">
+                <label>6. Selecione as tecnologias que você utiliza: </label>
+                <br>
+                <br>
+                 <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                 <label for="tecnologia1">HTML</label>
+                 <input type="checkbox"  id="tecnologia2" name="tecnologia2" value="CSS">
+                 <label for="tecnologia2">CSS</label>
+                 <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Python">
+                 <label for="tecnologia3">Pyhton</label>
+                 <input type="checkbox" id="tecnologia4" name="tecnologia4" value="Java">
+                 <label for="tecnologia4">Java</label>
+                 <input type="checkbox" id="tecnologia5" name="tecnologia5" value="JavaScript">
+                 <label for="tecnologia5">JavaScript</label>
+                 <input type="checkbox" id="tecnologia6" name="tecnologia6" value="SQL">
+                 <label for="tecnologia6">SQL</label> 
+                 <br>
+                 <br>
+                 </div>
+                 <div>
+                 <label id="item7">  7. Conte-nos um pouco sobre a sua experiência: </label>
+                 <br>
+                 <br>
+                 <textarea row="6" class="info" name="experience" id="experience">   Escreva aqui</textarea>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" id="go"><b>Enviar</b></button>
+                </div>
+       </fieldset>
+    </container>
+    <script> 
+        const element = window.document.querySelector("#title");
+        
+        function digitalTexto(elemento){
+            const textArray = elemento.innerHTML.split('');
+            element.innerHTML = '';
+            textArray.forEach((letra, i) => {
+
+                setTimeout(() => {
+
+                    elemento.innerHTML += letra;
+
+                }, 75 * i);
+            });
+        }
+
+        setTimeout(digitalTexto(element));
+    </script>
+</body>
+</html>
